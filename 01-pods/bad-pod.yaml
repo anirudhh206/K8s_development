@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: anirudh-pod
+  labels:
+    app: nginx-demo
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:this-tag-does-not-exist
+      ports:
+        - containerPort: 80
